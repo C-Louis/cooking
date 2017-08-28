@@ -1,0 +1,26 @@
+{
+  "name": "cooking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C-Louis/cooking.git"
+  },
+  "author": "C Louis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/C-Louis/cooking/issues"
+  },
+  "homepage": "https://github.com/C-Louis/cooking#readme",
+  "dependencies": {
+    "angularjs": "0.0.1",
+    "express": "^4.15.4",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.11.9",
+    "nodejs": "0.0.0"
+  }
+}
