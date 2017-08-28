@@ -1,0 +1,7 @@
+<h1>{{ vm.title }}</h1>
+
+<div ng-repeat="recipe in vm.recipes">
+  <ul>
+    <li><a ng-href="#!/recipe/{{ recipe._id }}">{{ recipe.title }}</a></li>
+  </ul>
+</div>
