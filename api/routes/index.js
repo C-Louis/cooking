@@ -1,18 +1,20 @@
-// require express
+// Requires express
 var express = require('express');
-//instantiate the express router
+//Instantiates the express router
 var router = express.Router();
 
-/* assign routes to router
+// Instantiates controllers
+var ctlrRecipes = require('../controllers/recipes.controllers.js');
+
+/* Assigns routes to router
  by defining for each route methods and functions */
 router
   .route('/recipes')
-  .get()
-  .post();
+  .get(ctlrRecipes.recipesGetAll);
 
 router
   .route('/recipes/:recipeId')
-  .get();
+  .get(ctlrRecipes.recipesGetOne);
 
-// export that router
+// Exports that router
 module.exports = router;

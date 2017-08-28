@@ -4,10 +4,10 @@ var express = require('express');
 var app = express();
 
 /* Native node modules*/
-//to work out the actual path to the file we want to use
+// to work out the actual path to the file we want to use
 var path = require('path');
 // to allow encoded format
-var bodyParser = require('body-parser');
+//var bodyParser = require('body-parser');
 
 // Require routes folder
 var routes = require('./api/routes');
@@ -23,8 +23,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
 // Tells the api endpoint it needs to handle all datas that come from forms in an url encoded format
-app.use(bodyParser.urlencoded({ extended : false }));
-app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended : false }));
+// app.use(bodyParser.json());
 
 // Middleware to use the routes folder
 app.use('/api', routes);
