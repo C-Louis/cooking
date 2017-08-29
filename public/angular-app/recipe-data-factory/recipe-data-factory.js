@@ -14,7 +14,6 @@ function recipeDisplay(id) {
   return $http.get('/api/recipes/' + id).then(complete).catch(failed);
 }
 
-
 function complete(response) {
   return response;
 }
