@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
 
@@ -14,13 +15,14 @@
       </div>
       <ul class="nav navbar-nav active">
         <li><a ng-href="#!/recipes">Mes recettes</a></li>
-        <li><a href="#">Page 2</a></li>
-        <li><a ng-href="#">Soumettre une recette</a></li>
+        <li><a href="#">Mes utilisateurs</a></li>
+        <li><a ng-href="#!/addrecipe">Ajouter une recette</a></li>
       </ul>
     </div>
   </nav>
 
     <ng-view></ng-view>
+
 
     <script src="jquery/jquery-3.2.1.js"></script>
     <script src="../node_modules/angular/angular.js"></script>
@@ -29,6 +31,8 @@
     <script src="angular-app/recipe-data-factory/recipe-data-factory.js"></script>
     <script src="angular-app/recipe-list/recipe-list-controller.js"></script>
     <script src="angular-app/recipe-display/recipe-display-controller.js"></script>
+    <script src="angular-app/recipe-form/recipe-form-controller.js"></script>
+    <script src="angular-app/recipe-delete/recipe-delete-controller.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   </body>

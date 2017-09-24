@@ -52,3 +52,44 @@ module.exports.recipesGetOne = function(req, res) {
         .json(response.message);
       });
 };
+
+module.exports.recipesAddOne = function(req, res) {
+  Recipe
+    .create({
+      title: req.body.title,
+      servingNumber: req.body.servingNumber,
+      preparationTime: req.body.preparationTime,
+      ingredients: req.body.ingredients,
+      instructions : req.body.instructions,
+      attachments: req.body.attachments
+  }, function(err, hotel) {
+    if(err) {
+      console.log('Error creating hotel', err);
+      res
+        .status(400)
+        .json(err);
+    } else {
+      console.log('Hotel created', hotel);
+      res
+        .status(201)
+        .json(hotel);
+    }
+  });
+};
+
+module.exports.recipesDeleteOne = function(req, res) {
+  var recipeId = req.params.recipeId;
+  var recipeTitle = "test";
+
+  Recipe
+    .findByIdAndRemove(recipeId)
+    .exec()
+    .then(doc => {
+      if (!doc) return res.status(404).end();
+      console.log(recipeTitle);
+      return res.status(204)
+                .json(recipeTitle)
+                .end();
+    })
+    .catch(err => next(err));
+};

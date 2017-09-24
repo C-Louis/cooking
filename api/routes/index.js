@@ -10,11 +10,15 @@ var ctlrRecipes = require('../controllers/recipes.controllers.js');
  by defining for each route methods and functions */
 router
   .route('/recipes')
-  .get(ctlrRecipes.recipesGetAll);
+  .get(ctlrRecipes.recipesGetAll)
+  .post(ctlrRecipes.recipesAddOne);
 
 router
   .route('/recipes/:recipeId')
-  .get(ctlrRecipes.recipesGetOne);
+  .get(ctlrRecipes.recipesGetOne)
+  .delete(ctlrRecipes.recipesDeleteOne);
+
+
 
 // Exports that router
 module.exports = router;

@@ -7,15 +7,15 @@ var recipeSchema = new mongoose.Schema({
     type : String,
     required : true
   },
-  servingNumber : Number,
-  preparationTime : Number,
+  servingNumber : String,
+  preparationTime : String,
   ingredients : {
     type : [String],
-    required : true
+    required : false
   },
   instructions : {
     type : String,
-    required : true
+    required : false
   }
 })
 

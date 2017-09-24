@@ -1,7 +1,12 @@
-<h1>{{ vm.title }}</h1>
+<h1>{{ vm.page }}</h1>
 
 <div ng-repeat="recipe in vm.recipes">
   <ul>
-    <li><a ng-href="#!/recipe/{{ recipe._id }}">{{ recipe.title }}</a></li>
+    <li>
+      <span>{{ recipe.title }}</span>
+      <a ng-href="#!/recipe/{{ recipe._id }}">Visualiser</a>
+      <a>Modifier</a>
+      <a data-method="delete" ng-href="#!/recipes/{{ recipe._id }}">Supprimer</a>
+    </li>
   </ul>
 </div>
