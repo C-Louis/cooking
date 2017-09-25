@@ -18,7 +18,5 @@ router
   .get(ctlrRecipes.recipesGetOne)
   .delete(ctlrRecipes.recipesDeleteOne);
 
-
-
 // Exports that router
 module.exports = router;

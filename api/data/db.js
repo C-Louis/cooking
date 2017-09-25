@@ -6,7 +6,9 @@ formatted 'protocol://server:port/database name' */
 var dburl = 'mongodb://localhost:27017/cookingrecipes';
 
 /* Opens the database connection using the 'connect' method on mongoose */
-mongoose.connect(dburl);
+mongoose.connect(dburl, {
+  useMongoClient: true
+});
 
 /* Event listeners to see when the database connection is made.
 2 parameters : the name ('connected' / 'disconnected' / 'error')

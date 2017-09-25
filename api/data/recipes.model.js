@@ -17,7 +17,7 @@ var recipeSchema = new mongoose.Schema({
     type : String,
     required : false
   }
-})
+});
 
 //
 mongoose.model('Recipe', recipeSchema);
