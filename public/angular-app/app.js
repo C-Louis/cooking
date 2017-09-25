@@ -1,7 +1,7 @@
 //
 angular.module('cookingrecipes', ['ngRoute']).config(config);
 
-//
+// Sets the routes of app
 function config($routeProvider) {
   $routeProvider
     .when('/recipes', {
@@ -23,6 +23,5 @@ function config($routeProvider) {
       templateUrl: 'angular-app/recipe-delete/recipe-delete.html',
       controller: RecipeDeleteController,
       controllerAs: 'vm'
-    })
-    ;
+    });
 }

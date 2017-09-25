@@ -9,6 +9,7 @@ var Recipe = mongoose.model('Recipe');
 
 /* METHODS */
 
+// Gets all recipes from database and sends them in json format.
 module.exports.recipesGetAll = function (req, res) {
     console.log('Gets all recipes');
 
@@ -29,6 +30,7 @@ module.exports.recipesGetAll = function (req, res) {
         });
 };
 
+// Gets by id one recipe from database and sends it in json format.
 module.exports.recipesGetOne = function (req, res) {
     var recipeId = req.params.recipeId;
     console.log('Gets recipe ' + recipeId + ' info');
@@ -59,6 +61,7 @@ module.exports.recipesGetOne = function (req, res) {
         });
 };
 
+// Creates a new recipe from a form and adds it in database.
 module.exports.recipesAddOne = function (req, res) {
     Recipe
         .create({
@@ -88,6 +91,7 @@ module.exports.recipesAddOne = function (req, res) {
         });
 };
 
+// Removes a recipe by id from database.
 module.exports.recipesDeleteOne = function (req, res) {
     var recipeId = req.params.recipeId;
     var recipeTitle = "test";
