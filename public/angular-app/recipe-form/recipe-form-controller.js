@@ -46,5 +46,10 @@ function RecipeFormController(recipeDataFactory, $window) {
      vm.ingredients.push(vm.newIngredient);
       // Reinit newIngredient variable
       vm.newIngredient = '';
+  };
+
+  // Removes an ingredient from the list of ingredients before submitting the form.
+  vm.removeIngredient = function(ingredient) {
+    vm.ingredients.splice(vm.ingredients.indexOf(ingredient), 1);
   }
 }
