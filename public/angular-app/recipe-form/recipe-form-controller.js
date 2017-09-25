@@ -33,8 +33,18 @@ function RecipeFormController(recipeDataFactory, $window) {
     }
   };
 
-  // Add a new ingredient in the ingredients array.
+  // Add a new ingredient to the ingredients list.
   vm.addIngredients = function() {
-    vm.ingredients.push(vm.ingredient);
+      // Gets the new ingredients from the scope
+      // and trim it to remove useless spaces at the beginning and the end of string.
+     var newIngredient = vm.newIngredient.trim();
+     // Avoids empty strings.
+     if(!newIngredient.length) {
+         return;
+     }
+     // Add the new ingredient to the ingredients array.
+     vm.ingredients.push(vm.newIngredient);
+      // Reinit newIngredient variable
+      vm.newIngredient = '';
   }
 }
