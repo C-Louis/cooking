@@ -1,4 +1,4 @@
-<h1>{{ vm.page }}</h1>
+<h1 class="page-title">{{ vm.page }}</h1>
 
 <form name="vm.recipeForm" ng-submit="vm.addRecipe()">
   <div class="form-group">
@@ -17,39 +17,29 @@
     <label for="preparationTime">Temps de préparation :</label>
     <input type="text" class="form-control" id="preparationTime" placeholder="Saisir le temps de préparation" name="preparationTime" ng-model="vm.preparationTime"/>
   </div>
-  <!-- <div class="form-group">
-    <label for="ingredients">Ingrédients :</label>
-    <div class="form-inline" ng-repeat="ingredient in vm.ingredients track by $index">
-      <input type="text" class="form-control ingredient-input" placeholder="Saisir les ingredients" name="ingredients" required ng-minlength="2" ng-model="vm.ingredient" value=""> </input>
-      <button class="btn btn-default btn-sm" ng-click="vm.deleteIngredients()">
-        <span class="glyphicon glyphicon-minus-sign"></span>
-      </button>
-    </div>
-    <div ng-show="vm.recipeForm.ingredients.$dirty && vm.recipeForm.ingredients.$invalid && vm.isSubmitted">
-      <p>Ingredients should be more than 2 characters long</p>
-    </div>
-    <button class="btn btn-default btn-sm" ng-click="vm.addIngredients()">
-      <span class="glyphicon glyphicon-plus-sign"></span> Plus
-    </button>
-  </div> -->
+
   <div class="form-group">
     <label for="ingredients">Ingrédients :</label>
-    <div class="form-inline">
-      <input type="text" class="form-control ingredient-input" placeholder="Saisir les ingredients" name="ingredients" required ng-minlength="2" ng-model="vm.ingredient" value=""> </input>
-      <button class="btn btn-default btn-sm" ng-click="vm.deleteIngredients()">
-        <span class="glyphicon glyphicon-minus-sign"></span>
-      </button>
-    </div>
+    <input type="text" class="form-control" placeholder="Saisir les ingredients" name="ingredient" ng-model="vm.newIngredient"/>
     <div ng-show="vm.recipeForm.ingredients.$dirty && vm.recipeForm.ingredients.$invalid && vm.isSubmitted">
       <p>Ingredients should be more than 2 characters long</p>
+    </div>
+    <div ng-repeat="ingredient in vm.ingredients track by $index" ng-show="vm.ingredients.length">
+        <ul>
+            <li>
+                <span>{{ ingredient }}</span>
+                <a ng-click="vm.deleteIngredients()"><span class="glyphicon glyphicon-minus-sign"></span></a>
+            </li>
+        </ul>
     </div>
     <button class="btn btn-default btn-sm" ng-click="vm.addIngredients()">
       <span class="glyphicon glyphicon-plus-sign"></span> Plus
     </button>
   </div>
+
   <div class="form-group">
     <label for="instructions">Instructions :</label>
-    <textarea type="text" class="form-control" id="instructions" placeholder="Saisir les instructions" name="instructions" required ng-minlength="2" ng-model="vm.instructions"/>
+    <textarea type="text" class="form-control" id="instructions" placeholder="Saisir les instructions" name="instructions" required ng-minlength="2" ng-model="vm.instructions"></textarea>
     <div ng-show="vm.recipeForm.instructions.$dirty && vm.recipeForm.instructions.$invalid && vm.isSubmitted">
       <p>Instructions should be more than 2 characters long</p>
     </div>

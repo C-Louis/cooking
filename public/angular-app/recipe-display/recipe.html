@@ -1,16 +1,16 @@
-<h1>{{ vm.recipe.title }}</h1>
+<h1 class="page-title">{{ vm.recipe.title }}</h1>
 
 <p ng-show="vm.recipe.servingNumber">Recette pour {{ vm.recipe.servingNumber }} personnes</p>
 <p ng-show="vm.recipe.preparationTime">Temps de préparation : {{ vm.recipe.preparationTime }} minutes</p>
 
-<div>
+<div class="recipe-section">
   <p>Ingrédients :</p>
   <ul ng-repeat="ingredient in vm.recipe.ingredients">
     <li>{{ ingredient }}</li>
   </ul>
 </div>
 
-<div>
+<div class="recipe-section">
   <p>Instructions :</p>
   <p>{{ vm.recipe.instructions }}</p>
 </div>
