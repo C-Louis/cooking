@@ -43,7 +43,7 @@ function RecipeFormController(recipeDataFactory, $window) {
          return;
      }
      // Add the new ingredient to the ingredients array.
-     vm.ingredients.push(vm.newIngredient);
+     vm.ingredients.push(newIngredient);
       // Reinit newIngredient variable
       vm.newIngredient = '';
   };
