@@ -31,13 +31,11 @@
         <ul>
             <li>
                 <span>{{ ingredient }}</span>
-                <a ng-click="vm.removeIngredient(ingredient)"><span class="glyphicon glyphicon-minus-sign"></span></a>
+                <a ng-click="vm.removeIngredient(ingredient)"><i class="fa fa-trash" aria-hidden="true"></i></a>
             </li>
         </ul>
     </div>
-    <button class="btn btn-default btn-sm" ng-click="vm.addIngredients()">
-      <span class="glyphicon glyphicon-plus-sign"></span> Plus
-    </button>
+
   </div>
 
   <div class="form-group">

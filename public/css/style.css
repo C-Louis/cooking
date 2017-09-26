@@ -1,14 +1,50 @@
-.centered {
-    margin: auto;
-    width: 50%;
+.navbar{
+    background-color: #366b9d;
 }
 
-.page-title {
+.navbar img{
+    width: 100px !important;
+    height: 100px !important;
+}
+
+footer{
+    height: 150px;
+    background-color: #366b9d;
+    margin-top: 50px;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.centered{
+    margin: 50px auto;
+    width: 75%;
+}
+
+.page-title{
     margin-bottom: 50px;
 }
 
-.recipe-section {
+.recipe-section{
     margin-top: 40px;
 }
 
+.card-img-top{
+    width: 50%;
+    margin: auto;
+}
 
+.card{
+    width: 250px;
+    margin: 0 0 30px 30px;
+}
+
+.card-footer a{
+    float: right;
+    padding-left: 20px;
+}
+
+.ingredient-input{
+    width: calc(100% - 30px) !important;
+}

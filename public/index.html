@@ -2,28 +2,45 @@
 <html ng-app="cookingrecipes">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title></title>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
+      <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
   </head>
   <body>
 
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">Qu'est ce que c'est bon !!</a>
-      </div>
-      <ul class="nav navbar-nav active">
-        <li><a ng-href="#!/recipes">Mes recettes</a></li>
-        <li><a href="#">Mes utilisateurs</a></li>
-        <li><a ng-href="#!/addrecipe">Ajouter une recette</a></li>
-      </ul>
-    </div>
-  </nav>
+    <nav class="navbar navbar-toggleable-md navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="../images/logo.png">
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" ng-href="#!/recipes">Mes recettes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Mes utilisateurs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ng-href="#!/addrecipe">Ajouter une recette</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
 
     <div class="centered">
       <ng-view></ng-view>
     </div>
+
+  <footer>
+
+    </footer>
 
     <script src="jquery/jquery-3.2.1.js"></script>
     <script src="../node_modules/angular/angular.js"></script>

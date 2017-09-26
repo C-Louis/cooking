@@ -5,7 +5,7 @@
 
 <div class="recipe-section">
   <p>Ingrédients :</p>
-  <ul ng-repeat="ingredient in vm.recipe.ingredients">
+  <ul ng-repeat="ingredient in vm.recipe.ingredients track by $index">
     <li>{{ ingredient }}</li>
   </ul>
 </div>

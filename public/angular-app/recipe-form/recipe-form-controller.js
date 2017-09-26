@@ -4,7 +4,7 @@ angular.module('cookingrecipes').controller('RecipeFormController', RecipeFormCo
 function RecipeFormController(recipeDataFactory, $window) {
   // Sets the scope
   var vm = this;
-  vm.page = 'SOUMETTRE UNE RECETTE';
+  vm.page = 'AJOUTER UNE RECETTE';
   vm.ingredients = [];
 
   // Add a new recipe

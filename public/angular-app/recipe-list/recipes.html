@@ -1,12 +1,32 @@
+<!--
 <h1 class="page-title">{{ vm.page }}</h1>
 
-<div ng-repeat="recipe in vm.recipes">
-  <ul>
-    <li>
-      <span>{{ recipe.title }}</span>
-      <a ng-href="#!/recipe/{{ recipe._id }}">Visualiser</a>
-      <a>Modifier</a>
-      <a data-method="delete" ng-href="#!/recipes/{{ recipe._id }}">Supprimer</a>
-    </li>
-  </ul>
+<div class="card-deck">
+    <div ng-repeat="recipe in vm.recipes">
+        <div class="card">
+            <img class="card-img-top" src="../images/assiette.jpg">
+            <div class="card-block">
+                <a ng-href="#!/recipe/{{ recipe._id }}"><h4 class="card-title">{{ recipe.title }}</h4></a>
+                <a class="glyphicon glyphicon-pencil"></a>
+                <a data-method="delete" ng-href="#!/recipes/{{ recipe._id }}" class="glyphicon glyphicon-remove"></a>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+
+<div class="card-deck">
+    <div data-ng-repeat="recipe in vm.recipes track by $index">
+        <div class="card">
+            <img class="card-img-top" src="../images/assiette.jpg" alt="Card image cap">
+            <div class="card-block">
+                <a ng-href="#!/recipe/{{ recipe._id }}"><h4 class="card-title">{{ recipe.title }}</h4></a>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia.</p>
+            </div>
+            <div class="card-footer">
+                <a><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                <a data-method="delete" ng-href="#!/recipes/{{ recipe._id }}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
 </div>

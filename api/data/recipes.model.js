@@ -15,7 +15,7 @@ var recipeSchema = new mongoose.Schema({
   },
   instructions : {
     type : String,
-    required : false
+    required : true
   }
 });
 
