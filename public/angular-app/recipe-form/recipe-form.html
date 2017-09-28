@@ -21,21 +21,19 @@
   <div class="form-group">
     <label for="ingredients">Ingrédients :</label>
     <div class="form-inline">
-      <input type="text" class="form-control ingredient-input" placeholder="Saisir les ingredients" name="ingredient" ng-model="vm.newIngredient"/>
+      <input type="text" class="form-control ingredient-input" placeholder="Saisir un ingredient" name="ingredient" ng-model="vm.newIngredient"/>
       <a class="btn btn-default btn-sm" ng-click="vm.addIngredients()"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
     </div>
     <div ng-show="vm.recipeForm.ingredients.$dirty && vm.recipeForm.ingredients.$invalid && vm.isSubmitted">
       <p>Ingredients should be more than 2 characters long</p>
     </div>
-    <div ng-repeat="ingredient in vm.ingredients track by $index" ng-show="vm.ingredients.length">
-        <ul>
-            <li>
-                <span>{{ ingredient }}</span>
-                <a ng-click="vm.removeIngredient(ingredient)"><i class="fa fa-trash" aria-hidden="true"></i></a>
-            </li>
+    <div class="form-ingredients">
+      <div ng-repeat="ingredient in vm.ingredients track by $index" ng-show="vm.ingredients.length">
+        <ul class="list-group">
+          <li class="list-group-item"><a ng-click="vm.removeIngredient(ingredient)"><i class="fa fa-trash" aria-hidden="true"></i></a>{{ ingredient }}</li>
         </ul>
+      </div>
     </div>
-
   </div>
 
   <div class="form-group">
