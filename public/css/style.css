@@ -1,15 +1,31 @@
 .navbar{
-    background-color: #366b9d;
+    background-color: saddlebrown;
+}
+
+.navbar li a{
+    font-size: 20px;
+    color: #fad865 !important;
+    margin-right: 20px;
 }
 
 .navbar img{
     width: 100px !important;
     height: 100px !important;
+    border-radius: 100px;
+}
+
+.btn-custom{
+    color: saddlebrown;
+    background-color: #fad865;
+  }
+
+.btn-custom:hover{
+    font-size: 120%;
 }
 
 footer{
     height: 150px;
-    background-color: #366b9d;
+    background-color: saddlebrown;
     margin-top: 50px;
 }
 
