@@ -29,9 +29,16 @@
     </div>
     <div class="form-ingredients">
       <div ng-repeat="ingredient in vm.ingredients track by $index" ng-show="vm.ingredients.length">
-        <ul class="list-group">
+        <div class="input-group">
+          <input type="text" value="{{ ingredient }}" disabled="true"/>
+          <span class="input-group-addon">
+              <a ng-click="vm.removeIngredient(ingredient)"><i class="fa fa-trash" aria-hidden="true"></i></a>
+          </span>
+        </div>
+
+        <!--<ul class="list-group">
           <li class="list-group-item"><a ng-click="vm.removeIngredient(ingredient)"><i class="fa fa-trash" aria-hidden="true"></i></a>{{ ingredient }}</li>
-        </ul>
+        </ul>-->
       </div>
     </div>
   </div>

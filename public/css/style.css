@@ -1,10 +1,10 @@
 .navbar{
-    background-color: saddlebrown;
+    background-color: darkgray;
 }
 
 .navbar li a{
     font-size: 20px;
-    color: #fad865 !important;
+    color: #ffd900 !important;
     margin-right: 20px;
 }
 
@@ -16,16 +16,17 @@
 
 .btn-custom{
     color: saddlebrown;
-    background-color: #fad865;
+    background-color: #ffd900;
   }
 
 .btn-custom:hover{
-    font-size: 120%;
+    color: white;
+    background-color: #ecc234;
 }
 
 footer{
-    height: 150px;
-    background-color: saddlebrown;
+    height: 155px;
+    background-color: darkgray;
     margin-top: 50px;
 }
 
@@ -38,12 +39,67 @@ a{
     width: 75%;
 }
 
+.home-logo{
+    border-radius: 100%;
+    width: 33%;
+    margin-right: 50px;
+}
+
+.home-title{
+    font-family: "Open Sans", sans-serif ;
+    font-size: 50px;
+    animation: fadein 5s;
+    -webkit-animation: fadein 5s;
+}
+
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
 .page-title{
     margin-bottom: 50px;
 }
 
-.recipe-section{
+.recipe-infos-section{
     margin-top: 40px;
+    display: flex;
+    border-bottom: thin solid darkgray;
+    border-top: thin solid darkgray;
+    padding: 30px 0 30px 0;
+}
+
+.recipe-infos-section span{
+    margin: 0 50px 0 10px;
+}
+
+.recipe-section{
+    display: flex;
+    margin-top: 40px;
+}
+
+.recipe-section-title{
+    margin-bottom: 30px;
+}
+
+.recipe-ingredients{
+    flex: 1;
+    margin-right: 50px;
+}
+
+.recipe-ingredients ul{
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.recipe-instructions{
+    flex: 4;
+    text-align: justify;
 }
 
 .card-img-top{
@@ -53,12 +109,35 @@ a{
 
 .card{
     width: 250px;
+    height: 425px;
     margin: 0 0 30px 30px;
+}
+
+.card i{
+    color: black;
+}
+
+.card-title{
+    color: black;
+}
+
+.card-title:hover{
+    color: darkgray;
 }
 
 .card-footer a{
     float: right;
     padding-left: 20px;
+}
+
+.card-footer a{
+    width: 28px;
+    height: 34px;
+}
+
+.card-footer i:hover{
+    font-size: 120%;
+    background-color: #f7f7f9;
 }
 
 .ingredient-input{
@@ -68,8 +147,13 @@ a{
 .form-ingredients{
     width: 90%;
     margin: 20px auto;
+    display: flex;
 }
 
 .form-ingredients i{
     margin-right: 25px;
+}
+
+.input-group{
+    margin-right: 20px;
 }

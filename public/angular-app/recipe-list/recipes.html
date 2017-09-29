@@ -20,8 +20,8 @@
         <div class="card">
             <img class="card-img-top" src="../images/assiette.jpg" alt="Card image cap">
             <div class="card-block">
-                <a ng-href="#!/recipe/{{ recipe._id }}"><h4 class="card-title">{{ recipe.title }}</h4></a>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia.</p>
+                <a ng-href="#!/recipe/{{ recipe._id }}"><h5 class="card-title">{{ recipe.title }}</h5></a>
+                <p class="card-text">{{ recipe.instructions | limitTo: 150 }}...</p>
             </div>
             <div class="card-footer">
                 <a><i class="fa fa-pencil" aria-hidden="true"></i></a>

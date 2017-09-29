@@ -1,16 +1,29 @@
 <h1 class="page-title">{{ vm.recipe.title }}</h1>
 
-<p ng-show="vm.recipe.servingNumber">Recette pour {{ vm.recipe.servingNumber }} personnes</p>
-<p ng-show="vm.recipe.preparationTime">Temps de préparation : {{ vm.recipe.preparationTime }} minutes</p>
+<section class="recipe-infos-section">
+  <div ng-show="vm.recipe.servingNumber">
+    <i class="fa fa-user" aria-hidden="true"></i>
+    <span>{{ vm.recipe.servingNumber }} personnes</span>
+  </div>
+  <div ng-show="vm.recipe.preparationTime">
+    <i class="fa fa-clock-o" aria-hidden="true"></i>
+    <span>{{ vm.recipe.preparationTime }} minutes</span>
+  </div>
+</section>
 
-<div class="recipe-section">
-  <p>Ingrédients :</p>
-  <ul ng-repeat="ingredient in vm.recipe.ingredients track by $index">
-    <li>{{ ingredient }}</li>
-  </ul>
-</div>
+<section class="recipe-section">
+  <div class="recipe-ingredients">
+    <h5 class="recipe-section-title">Ingrédients :</h5>
+    <ul ng-repeat="ingredient in vm.recipe.ingredients track by $index">
+      <li>{{ ingredient }}</li>
+    </ul>
+  </div>
 
-<div class="recipe-section">
-  <p>Instructions :</p>
-  <p>{{ vm.recipe.instructions }}</p>
-</div>
+  <div class="recipe-instructions">
+    <h5 class="recipe-section-title">Préparation :</h5>
+    <p>{{ vm.recipe.instructions }}</p>
+  </div>
+</section>
+
+
+

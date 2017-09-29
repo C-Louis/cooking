@@ -4,6 +4,9 @@ angular.module('cookingrecipes', ['ngRoute']).config(config);
 // Sets the routes of app
 function config($routeProvider) {
   $routeProvider
+    .when('/', {
+      templateUrl: 'angular-app/home/home.html'
+    })
     .when('/recipes', {
       templateUrl: 'angular-app/recipe-list/recipes.html',
       controller: RecipesController,
