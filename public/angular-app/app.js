@@ -31,5 +31,10 @@ function config($routeProvider) {
       templateUrl: 'angular-app/user-list/users.html',
       controller: UsersController,
       controllerAs: 'vm'
+    })
+    .when('/user/:id', {
+      templateUrl: 'angular-app/user-display/user.html',
+      controller: UserController,
+      controllerAs: 'vm'
     });
 }

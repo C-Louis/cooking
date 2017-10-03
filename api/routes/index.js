@@ -23,5 +23,10 @@ router
   .route('/users')
   .get(ctlrUsers.usersGetAll);
 
+router
+    .route('/users/:userId')
+    .get(ctlrUsers.usersGetOne)
+    .put(ctlrUsers.userUpdateOne);
+
 // Exports that router
 module.exports = router;
