@@ -51,4 +51,4 @@ process.once('SIGUSR2', function() {
 });
 
 // Brings in data models and schemas
-require('./recipes.model.js');
+require('./model.js');

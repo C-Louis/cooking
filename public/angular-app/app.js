@@ -26,5 +26,10 @@ function config($routeProvider) {
       templateUrl: 'angular-app/recipe-delete/recipe-delete.html',
       controller: RecipeDeleteController,
       controllerAs: 'vm'
+    })
+    .when('/users', {
+      templateUrl: 'angular-app/user-list/users.html',
+      controller: UsersController,
+      controllerAs: 'vm'
     });
 }
